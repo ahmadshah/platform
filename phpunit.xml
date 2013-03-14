@@ -3,19 +3,19 @@
 <phpunit 
 	 bootstrap="laravel/tests/phpunit.php"
 	 backupGlobals="false"
-	 colors="true" 
-	 stopOnError="false"
-	 stopOnFailure="false"
-	 stopOnIncomplete="false"
-	 stopOnSkipped="false">
+	 colors="true">
 	<testsuites>
 		<testsuite name="Laravel">
 			<directory suffix=".test.php">laravel/tests/cases/</directory>
+		</testsuite>
+		<testsuite name="Application">
+			<directory suffix=".test.php">application/tests/</directory>
 		</testsuite>
 	</testsuites>
 	<filter>
 		<whitelist addUncoveredFilesFromWhitelist="false">
 			<directory suffix=".php">laravel</directory>
+			<directory suffix=".php">application</directory>
 
 			<exclude>
 				<directory suffix=".php">laravel/cli/test/</directory>
