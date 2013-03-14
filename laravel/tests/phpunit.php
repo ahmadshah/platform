@@ -30,3 +30,9 @@ require path('sys').'core.php';
 // Start the default bundle.
 // --------------------------------------------------------------
 Laravel\Bundle::start(DEFAULT_BUNDLE);
+
+
+if (is_file($vendor = path('base').'vendor'.DS.'autoload.php')) 
+{
+	require_once $vendor;
+}

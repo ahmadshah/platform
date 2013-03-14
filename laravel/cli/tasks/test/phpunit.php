@@ -24,5 +24,5 @@ Laravel\Bundle::start(DEFAULT_BUNDLE);
 
 if (is_file($vendor = path('base').'vendor'.DS.'autoload.php')) 
 {
-  require_once $vendor;
+	require_once $vendor;
 }
