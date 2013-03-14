@@ -11,7 +11,7 @@
 	 stopOnIncomplete="false"
 	 stopOnSkipped="false">
 	<testsuites>
-		<testsuite name="Orchestra Platform Test Suite">
+		<testsuite name="Laravel">
 			<directory suffix=".test.php">laravel/tests/cases/</directory>
 		</testsuite>
 	</testsuites>
