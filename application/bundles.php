@@ -35,6 +35,8 @@
 
 return array(
 
-	'docs' => array('handles' => 'docs'),
+	'docs'      => array('handles' => 'docs'),
+	'orchestra' => array('auto' => true, 'handles' => 'admin'),
+	'messages',
 
 );
