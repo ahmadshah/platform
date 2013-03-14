@@ -4,4 +4,4 @@ php:
   - 5.3
   - 5.4
 
-script: "php artisan test:core"
+script: "phpunit --coverage-text"
