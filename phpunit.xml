@@ -3,9 +3,7 @@
 <phpunit 
 	 bootstrap="laravel/tests/phpunit.php"
 	 backupGlobals="false"
-	 colors="true"
-	 convertNoticesToExceptions="true"
-	 convertWarningsToExceptions="true"
+	 colors="true" 
 	 stopOnError="false"
 	 stopOnFailure="false"
 	 stopOnIncomplete="false"
@@ -20,9 +18,9 @@
 			<directory suffix=".php">laravel</directory>
 
 			<exclude>
-				<directory suffix=".php">/laravel/cli/test/</directory>
-				<directory suffix=".php">/laravel/tests</directory>
-				<directory suffix=".php">/laravel/vendor/</directory>
+				<directory suffix=".php">laravel/cli/test/</directory>
+				<directory suffix=".php">laravel/tests</directory>
+				<directory suffix=".php">laravel/vendor/</directory>
 			</exclude>
 		</whitelist>
 	</filter>
