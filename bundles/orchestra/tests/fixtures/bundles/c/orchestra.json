@@ -1,0 +1,13 @@
+{
+	"name"        : "Extension C",
+	"description" : "",
+	"author"      : "",
+	"url"         : "",
+	"version"     : "0.2.0",
+	"config"      : {
+		"foo" : "foobar"
+	},
+	"require"     : {
+		"d"   : ">=2.0.0"
+	}
+}

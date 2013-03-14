@@ -1,0 +1,9 @@
+{
+	"name"        : "Extension Name",
+	"description" : "",
+	"author"      : "",
+	"url"         : "",
+	"version"     : "0.1.0",
+	"config"      : {},
+	"require"     : {}
+}
