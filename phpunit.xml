@@ -5,10 +5,10 @@
 	 backupGlobals="false"
 	 colors="true">
 	<testsuites>
-		<testsuite name="Laravel">
+		<testsuite name="laravel">
 			<directory suffix=".test.php">laravel/tests/cases/</directory>
 		</testsuite>
-		<testsuite name="Application">
+		<testsuite name="application">
 			<directory suffix=".test.php">application/tests/</directory>
 		</testsuite>
 	</testsuites>
