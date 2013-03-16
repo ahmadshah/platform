@@ -57,6 +57,7 @@
 ## Laravel 3.3
 
 - **Laravie**
+	- Add support to [Composer](http://getcomposer.org).
 	- Add `laravel.ready` event.
 	- Fix `Laravel\Database\Query::lists()` for empty resultsets. 
 	- Added unit testing to core, and enable continuous integration with [Travis-CI](https://travis-ci.org).
