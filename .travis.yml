@@ -8,4 +8,4 @@ before_script:
   - curl -s http://getcomposer.org/installer | php
   - php composer.phar install --dev
 
-script: "phpunit -c travis/phpunit.xml"
+script: "phpunit -c laravel/tests/phpunit.xml && phpunit -c bundles/orchestra/phpunit.xml"

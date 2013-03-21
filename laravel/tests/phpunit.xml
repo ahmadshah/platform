@@ -6,17 +6,17 @@
 	 colors="true">
 	<testsuites>
 		<testsuite name="laravel">
-			<directory suffix=".test.php">../laravel/tests/cases/</directory>
+			<directory suffix=".test.php">../tests/cases/</directory>
 		</testsuite>
 	</testsuites>
 	<filter>
 		<whitelist addUncoveredFilesFromWhitelist="false">
-			<directory suffix=".php">../laravel</directory>
+			<directory suffix=".php">../</directory>
 
 			<exclude>
-				<directory suffix=".php">../laravel/cli/test/</directory>
-				<directory suffix=".php">../laravel/tests</directory>
-				<directory suffix=".php">../laravel/vendor/</directory>
+				<directory suffix=".php">../cli/test/</directory>
+				<directory suffix=".php">../tests</directory>
+				<directory suffix=".php">../vendor/</directory>
 			</exclude>
 		</whitelist>
 	</filter>
