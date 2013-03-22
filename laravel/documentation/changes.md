@@ -57,6 +57,7 @@
 ## Laravel 3.3
 
 - **Laravie**
+	- Add query scope using `\Eloquent`.
 	- Add support to [Composer](http://getcomposer.org).
 	- Add `laravel.ready` event.
 	- Fix `Laravel\Database\Query::lists()` for empty resultsets. 
