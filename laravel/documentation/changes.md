@@ -3,7 +3,9 @@
 ## Contents
 
 - [Laravel 3.3](#3.3)
-- [Upgrading From 3.2.13](#upgrade-3.3)
+- [Upgrading From 3.2.14](#upgrade-3.3)
+- [Laravel 3.2.14](#3.2.14)
+- [Upgrading From 3.2.13](#upgrade-3.2.14)
 - [Laravel 3.2.13](#3.2.13)
 - [Upgrading From 3.2.12](#upgrade-3.2.13)
 - [Laravel 3.2.12](#3.2.12)
@@ -115,7 +117,18 @@
 - Fix a bug with Eloquent model classes and `isset()` when eager loading a relationship returns an empty result set.
 
 <a name="upgrade-3.3"></a>
-## Upgrading From 3.2.13
+## Upgrading From 3.2.14
+
+- Replace the **laravel** folder.
+
+<a name="3.2.14"></a>
+## Laravel 3.2.14
+
+- IoC can now resolve default parameters.
+- Fix bug in Postgres insert_get_id when using FETCH_ASSOC.
+
+<a name="upgrade-3.2.14"></a>
+### Upgrading From 3.2.13
 
 - Replace the **laravel** folder.
 
