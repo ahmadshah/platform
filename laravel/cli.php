@@ -20,7 +20,7 @@ class CLI {
 	 * 
 	 * @var boolean
 	 */
-	public static $enabled = true;
+	public static $enabled = false;
 
 	/**
 	 * Indicate Laravel\CLI is started

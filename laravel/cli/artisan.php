@@ -13,6 +13,11 @@ use Laravel\Request;
 Bundle::start(DEFAULT_BUNDLE);
 
 /**
+ * Enable color output, when possible.
+ */
+Console::$enabled = true;
+
+/**
  * The default database connection may be set by specifying a value
  * for the "database" CLI option. This allows migrations to be run
  * conveniently for a test or staging database.
