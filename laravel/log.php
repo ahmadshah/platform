@@ -52,6 +52,24 @@ class Log {
 		// to the event for debugging.
 		Event::fire('laravel.log', array($type, $message));
 
+		$trace = debug_backtrace();
+
+		foreach($trace as $item)
+		{
+			if (isset($item['class']) AND $item['class'] == __CLASS__)
+			{
+				continue;
+			}
+
+			$caller = $item;
+
+			break;
+		}
+
+		$function  = $caller['function'];
+		$class     = isset($caller['class']) ? $caller['class'] . '::' : '';
+		
+		$message   = static::format($type, $class . $function . ' - ' . $message);
 		$threshold = (array) Config::get('application.logger_treshold', array());
 
 		switch (true)

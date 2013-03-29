@@ -183,6 +183,7 @@ return array(
 		'Auth'          => 'Laravel\\Auth',
 		'Authenticator' => 'Laravel\\Auth\\Drivers\\Driver',
 		'Asset'         => 'Laravel\\Asset',
+		'Command'       => 'Laravel\\CLI\\Command',
 		'Autoloader'    => 'Laravel\\Autoloader',
 		'Blade'         => 'Laravel\\Blade',
 		'Bundle'        => 'Laravel\\Bundle',

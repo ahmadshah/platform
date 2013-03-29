@@ -50,6 +50,7 @@ try
 catch (\Exception $e)
 {
 	Console::error($e->getMessage());
+	exit(1);
 }
 
 echo PHP_EOL;
