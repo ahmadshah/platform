@@ -5,6 +5,7 @@ use Laravel\File;
 use Laravel\Event;
 use Laravel\Config;
 use Laravel\Request;
+use Laravel\Response;
 use Laravel\Database;
 
 class Profiler {
@@ -24,10 +25,17 @@ class Profiler {
 	 */
 	public static function render($response)
 	{
+		$is_html = ! Request::ajax();
+
+		if ($response instanceof Response)
+		{
+			$is_html = starts_with($response->foundation->headers->get('content-type'), 'text/html');
+		}
+
 		// We only want to send the profiler toolbar if the request is not an AJAX
 		// request, as sending it on AJAX requests could mess up JSON driven API
 		// type applications, so we will not send anything in those scenarios.
-		if ( ! Request::ajax() and Config::get('application.profiler') )
+		if ($is_html and Config::get('application.profiler') )
 		{
 			static::$data['memory'] = get_file_size(memory_get_usage(true));
 			static::$data['memory_peak'] = get_file_size(memory_get_peak_usage(true));
