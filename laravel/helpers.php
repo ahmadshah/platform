@@ -327,7 +327,7 @@ function head($array)
  */
 function url($url = '', $https = null)
 {
-	return Laravel\URL::to($url, $https);
+	return URL::to($url, $https);
 }
 
 /**
@@ -339,7 +339,7 @@ function url($url = '', $https = null)
  */
 function asset($url, $https = null)
 {
-	return Laravel\URL::to_asset($url, $https);
+	return URL::to_asset($url, $https);
 }
 
 /**
@@ -359,7 +359,7 @@ function asset($url, $https = null)
  */
 function action($action, $parameters = array())
 {
-	return Laravel\URL::to_action($action, $parameters);
+	return URL::to_action($action, $parameters);
 }
 
 /**
@@ -379,7 +379,7 @@ function action($action, $parameters = array())
  */
 function route($name, $parameters = array())
 {
-	return Laravel\URL::to_route($name, $parameters);
+	return URL::to_route($name, $parameters);
 }
 
 /**
@@ -522,7 +522,7 @@ function view($view, $data = array())
 {
 	if (is_null($view)) return '';
 
-	return Laravel\View::make($view, $data);
+	return View::make($view, $data);
 }
 
 /**
@@ -536,7 +536,7 @@ function render($view, $data = array())
 {
 	if (is_null($view)) return '';
 
-	return Laravel\View::make($view, $data)->render();
+	return View::make($view, $data)->render();
 }
 
 /**
@@ -550,7 +550,7 @@ function render($view, $data = array())
  */
 function render_each($partial, array $data, $iterator, $empty = 'raw|')
 {
-	return Laravel\View::render_each($partial, $data, $iterator, $empty);
+	return View::render_each($partial, $data, $iterator, $empty);
 }
 
 /**
@@ -561,7 +561,7 @@ function render_each($partial, array $data, $iterator, $empty = 'raw|')
  */
 function yield($section)
 {
-	return Laravel\Section::yield($section);
+	return Section::yield($section);
 }
 
 /**
