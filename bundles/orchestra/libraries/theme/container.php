@@ -73,10 +73,35 @@ class Container {
 			$this->relative_url = str_replace(URL::base(), '/', $this->url);
 		}
 
+		// Check if the theme folder actually exist.
 		if (is_dir($theme = $this->path.DS.$name))
 		{
 			$this->config = new Definition($theme); 
 			$this->name   = $name;
+		}
+	}
+
+	/**
+	 * Start the theme by autoloading all the relevant files.
+	 *
+	 * @access public
+	 * @return void
+	 */
+	public function start()
+	{
+		// There might be situation where Orchestra Platform was unable 
+		// to get theme information, we should only assume there a valid
+		// theme when config is actually an instance of 
+		// Orchestra\Theme\Definiton
+		if ( ! $this->config instanceof Definition) return null;
+
+		// Loop and include all file which was mark as autoloaded.
+		if (isset($this->config->autoload) and is_array($this->config->autoload))
+		{
+			foreach ($this->config->autoload as $file)
+			{
+				include_once $this->path.DS.$this->name.DS.ltrim($file, DS);
+			}
 		}
 	}
 
@@ -200,11 +225,11 @@ class Container {
 			// view path and return the first one we find for the given view.
 			if (file_exists($path = $directory.$view.BLADE_EXT))
 			{
-				$file = 'path: '.$path;
+				$file = "path: {$path}";
 			}
 			elseif (file_exists($path = $directory.$view.EXT))
 			{
-				$file = 'path: '.$path;
+				$file = "path: {$path}";
 			}
 		}
 
